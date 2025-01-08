@@ -1,6 +1,6 @@
+// https://leetcode.com/problems/reverse-integer/
 package a2z.dza.basics;
 
-// https://leetcode.com/problems/reverse-integer/
 public class ReverseInteger {
     public static int reverse(int x) {
         long result = 0L;

@@ -1,6 +1,6 @@
+// https://www.geeksforgeeks.org/problems/count-digits5716/1
 package a2z.dza.basics;
 
-// https://www.geeksforgeeks.org/problems/count-digits5716/1
 public class CountDigits {
 
     public static int evenlyDivides(int n) {

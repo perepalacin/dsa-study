@@ -18,6 +18,11 @@ public class LongestSubArrayWithSumKTests {
 
     @Test
     public void Test3() {
-        Assert.assertEquals(0, LongestSubArrayWithSumK.longestSubarray(new int[]{10, -10, 20, 30}, 5));
+        Assert.assertEquals(0, LongestSubArrayWithSumK.longestSubarray(new int[]{10, -10, 20, 30}, 5 ));
+    }
+
+    @Test
+    public void Test4() {
+        Assert.assertEquals(3, LongestSubArrayWithSumK.longestSubarray(new int[]{94, -33, -13, 40, -82, 94, -33, -13, 40, -82}, 52 ));
     }
 }

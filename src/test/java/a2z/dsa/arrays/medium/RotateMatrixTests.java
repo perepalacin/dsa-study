@@ -1,7 +1,6 @@
 package a2z.dsa.arrays.medium;
 
 import a2z.dza.arrays.medium.RotateMatrix;
-import a2z.dza.arrays.medium.SetMatrixZeros;
 import org.junit.Assert;
 import org.junit.Test;
 

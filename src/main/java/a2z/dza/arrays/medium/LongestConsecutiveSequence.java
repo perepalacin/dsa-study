@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/longest-consecutive-sequence/editorial/
 package a2z.dza.arrays.medium;
 
 import java.util.HashMap;

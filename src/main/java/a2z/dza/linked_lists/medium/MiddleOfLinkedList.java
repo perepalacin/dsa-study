@@ -37,8 +37,6 @@ public class MiddleOfLinkedList {
             slow = slow.next;
         }
         return slow;
-
-
     }
 
 }

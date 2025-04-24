@@ -34,7 +34,5 @@ public class ReverseLinkedList {
         }
         head.next = null;
         return newHead;
-
-
     }
 }

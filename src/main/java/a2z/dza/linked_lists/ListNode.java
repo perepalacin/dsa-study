@@ -57,5 +57,17 @@ public class ListNode {
         return head;
     }
 
+    public String getStringRepresentation () {
+        StringBuilder result = new StringBuilder();
+        ListNode current = this;
+        
+        while (current != null) {
+            result.append(current.val + " - ");
+            current = current.next;
+        }
+
+        return result.toString();
+
+    }
 
 }

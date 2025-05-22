@@ -66,6 +66,9 @@ public class ListNode {
             current = current.next;
         }
 
+        if (result.isEmpty()) {
+            return null;
+        }
         return result.toString();
 
     }

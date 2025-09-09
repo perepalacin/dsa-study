@@ -3,6 +3,7 @@
 
 void Insert(int x);
 void InsertAtN(int x, int n);
+void DeleteAtN(int n);
 void Print();
 
 typedef struct Node {
@@ -45,6 +46,57 @@ void InsertAtN(int x, int n) {
     printf("The index provided (%d) is out of bounds.\n", n);
 }
 
+void DeleteAtN(int n) {
+    Node* temp = head;
+    if (n == 0) {
+        head = head->next;
+        free(temp);
+    }   
+    temp = temp->next;
+    Node* previous_temp = head;
+    int i = 1;
+    while (temp != NULL) {
+        if (i == n) {
+            previous_temp->next = temp->next;
+            free(temp);
+            return;
+        }
+        i++;
+        temp = temp->next;
+        previous_temp = previous_temp->next;
+    }
+    printf("The index provided (%d) is out of bounds.\n", n);
+}
+
+void ReverseLinkList(void) {
+    if (head == NULL) {
+        return;
+    }
+
+    Node* lastVisitedNode = NULL;
+    Node* current = head;
+    while (current != NULL) {
+        Node* nextNode = current->next;
+        current->next = lastVisitedNode;
+        lastVisitedNode = current;
+        current = nextNode;
+    }
+    head = lastVisitedNode;
+}
+
+
+//WIP
+void ReverseWithRecursion (Node* node) {
+    if (node == NULL) {
+        return;
+    }
+
+    Node* nextNode = node->next;
+    node->next = lastVisitedNode;
+    lastVisitedNode = node;
+    ReverseWithRecursion(nextNode, lastVisitedNode);
+}
+
 void Print() {
     Node* temp = head;
     printf("The list is: ");
@@ -55,9 +107,17 @@ void Print() {
     printf("\n");
 }
 
+void PrintWithRecursion(Node* node) {
+    if (node != NULL) {
+        printf("%d,", node->data);
+        PrintWithRecursion(node->next);
+    }
+}
+
 int main() {
     head = NULL;
 
+    // // Test 1
     // printf("How many numbers?\n");
 
     // int n, i, x;
@@ -69,14 +129,31 @@ int main() {
     //     Print();
     // }
 
-InsertAtN(2,0);
-Print();
-InsertAtN(3,1);
-Print();
-InsertAtN(4,0);
-Print();
-InsertAtN(5,1);
-Print();
+    // // Test 2
+    // InsertAtN(2,0);
+    // Print();
+    // InsertAtN(3,1);
+    // Print();
+    // InsertAtN(4,0);
+    // Print();
+    // InsertAtN(5,1);
+    // Print();
+
+    // // Test 3
+    Insert(2);
+    Insert(4);
+    Insert(6);
+    Insert(5);
+    Print();
+
+    int (n);
+    // printf("Enter a position\n");
+    // scanf("%d", &n);
+    // DeleteAtN(n);
+
+    // ReverseLinkList();
+    ReverseWithRecursion(head, NULL);
+    Print();
 
 }
 
